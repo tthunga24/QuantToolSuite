@@ -9,9 +9,9 @@ public:
     explicit test(QObject *parent = nullptr) : QObject(parent) {}
 
     Q_INVOKABLE void processNumber(int number) {
-        number *= 2;
+        number *= 3;
         qDebug() << "Received number from QML:" << number;
-        emit numberProcessed("Your input *2 is: " + QString::number(number));
+        emit numberProcessed("Your input *3 is: " + QString::number(number));
     }
 
 signals:
