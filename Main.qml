@@ -13,7 +13,7 @@ ApplicationWindow {
         TextField {
             id: inputField
             placeholderText: "Enter"
-            validator: IntValidator { bottom: -1000; top: 1000 }
+            validator: IntValidator { bottom: -999; top: 1000 }
         }
 
         Button {
