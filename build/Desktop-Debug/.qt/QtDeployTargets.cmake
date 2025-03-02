@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_appQuantToolSuite_FILE /home/tt/Documents/projects/QuantToolSuite/build/Desktop-Debug/appQuantToolSuite)
-set(__QT_DEPLOY_TARGET_appQuantToolSuite_TYPE EXECUTABLE)

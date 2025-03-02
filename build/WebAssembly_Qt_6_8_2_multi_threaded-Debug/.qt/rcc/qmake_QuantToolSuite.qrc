@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/QuantToolSuite">
-    <file alias="qmldir">/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/QuantToolSuite/qmldir</file>
-  </qresource>
-</RCC>
-
