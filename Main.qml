@@ -18,11 +18,19 @@ ApplicationWindow {
 
         Button {
             text: "Submit"
-            onClicked: testObj.processNumber(parseInt(inputField.text))
+            onClicked: {
+                testObj.processNumber(parseInt(inputField.text));
+                testObj.processNumber2(parseInt(inputField.text))
+            }
         }
 
         Text {
             id: outputText
+            font.pixelSize: 16
+            color: "blue"
+        }
+        Text {
+            id: outputText2
             font.pixelSize: 16
             color: "blue"
         }
@@ -32,6 +40,9 @@ ApplicationWindow {
         target: testObj
         function onNumberProcessed(result) {
             outputText.text = result
+        }
+        function onNumberProcessed2(result) {
+            outputText2.text = result
         }
     }
 }
