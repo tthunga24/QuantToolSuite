@@ -1,0 +1,5 @@
+module QuantToolSuite
+typeinfo appQuantToolSuite.qmltypes
+prefer :/qt/qml/QuantToolSuite/
+Main 1.0 Main.qml
+

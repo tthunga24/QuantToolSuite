@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appQuantToolSuite_FILE /home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/appQuantToolSuite.js)
+set(__QT_DEPLOY_TARGET_appQuantToolSuite_TYPE EXECUTABLE)

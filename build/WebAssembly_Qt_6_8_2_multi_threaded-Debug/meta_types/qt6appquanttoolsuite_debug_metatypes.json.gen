@@ -1,0 +1,48 @@
+[
+    {
+        "classes": [
+            {
+                "className": "test",
+                "lineNumber": 6,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "processNumber",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "test",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "result",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "numberProcessed",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "test.h",
+        "outputRevision": 68
+    }
+]

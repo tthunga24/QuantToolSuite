@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-4a5fbe425a2c5feb1628.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QuantToolSuite",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-dba73d1ab915b351f576.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-3d2da5485ce792d19c89.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-1eff87933529aa1a2b6f.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-e41816f38f8667ff9c14.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-c3280b2eac0ee823f888.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite-Debug-592b72b263d7e8dc36c8.json",
+					"name" : "appQuantToolSuite",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_autogen-Debug-e4ef659e690707e01078.json",
+					"name" : "appQuantToolSuite_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_autogen_timestamp_deps-Debug-ec075d44dd474e9f7567.json",
+					"name" : "appQuantToolSuite_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_copy_qml-Debug-040003d4edd90e8415e4.json",
+					"name" : "appQuantToolSuite_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_copy_res-Debug-1bab02e7a8671a8d8954.json",
+					"name" : "appQuantToolSuite_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_qmlimportscan-Debug-1e6036bd082533582e1e.json",
+					"name" : "appQuantToolSuite_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_qmllint-Debug-ac2a2ecdeb00806e2ea7.json",
+					"name" : "appQuantToolSuite_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_qmllint_json-Debug-5ce6e914f32d105fffcc.json",
+					"name" : "appQuantToolSuite_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_qmllint_module-Debug-6ecfed97b724cf2b8318.json",
+					"name" : "appQuantToolSuite_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appQuantToolSuite_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appQuantToolSuite_qmltyperegistration-Debug-cec80822b6c41356ebd9.json",
+					"name" : "appQuantToolSuite_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appQuantToolSuite_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appQuantToolSuite_aotstats_target-Debug-d3ddfc99568358d3c671.json",
+					"name" : "module_appQuantToolSuite_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tt/Documents/projects/QuantToolSuite/build/Desktop-Debug",
+		"source" : "/home/tt/Documents/projects/QuantToolSuite"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,14 @@
+-rootPath
+/home/tt/Documents/projects/QuantToolSuite
+-cmake-output
+-output-file
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/.qt/qml_imports/appQuantToolSuite_conf.cmake
+-importPath
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/QuantToolSuite
+-importPath
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug
+-importPath
+/home/tt/large/qt/6.8.2/wasm_multithread/qml
+-qrcFiles
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/.qt/rcc/qmake_QuantToolSuite.qrc
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/.qt/rcc/appQuantToolSuite_raw_qml_0.qrc

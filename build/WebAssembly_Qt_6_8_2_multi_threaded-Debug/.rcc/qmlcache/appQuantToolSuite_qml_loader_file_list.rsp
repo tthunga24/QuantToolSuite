@@ -1,0 +1,5 @@
+--resource
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/.qt/rcc/qmake_QuantToolSuite.qrc
+--resource
+/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/.qt/rcc/appQuantToolSuite_raw_qml_0.qrc
+/qt/qml/QuantToolSuite/Main.qml

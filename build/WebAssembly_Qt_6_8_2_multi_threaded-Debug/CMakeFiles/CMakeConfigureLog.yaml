@@ -1,0 +1,223 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Linux - 6.13.4-arch1-1 - x86_64
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/Qt6Dependencies.cmake:34 (_qt_internal_find_third_party_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/Qt6Config.cmake:145 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-kiQCEI"
+      binary: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-kiQCEI"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/platforms;/home/tt/large/emsdk/upstream/emscripten/cmake/Modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-kiQCEI'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_9964d
+        [1/2] /home/tt/large/emsdk/upstream/emscripten/em++ -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG -MD -MT CMakeFiles/cmTC_9964d.dir/src.cxx.o -MF CMakeFiles/cmTC_9964d.dir/src.cxx.o.d -o CMakeFiles/cmTC_9964d.dir/src.cxx.o -c /home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-kiQCEI/src.cxx
+        [2/2] : && /home/tt/large/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_9964d.dir/src.cxx.o -o cmTC_9964d.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:145 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:43 (include)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/Qt6Config.cmake:190 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-O0AL3C"
+      binary: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-O0AL3C"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/platforms;/home/tt/large/emsdk/upstream/emscripten/cmake/Modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-O0AL3C'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_42766
+        [1/2] /home/tt/large/emsdk/upstream/emscripten/em++ -DHAVE_STDATOMIC  -DQT_QML_DEBUG -MD -MT CMakeFiles/cmTC_42766.dir/src.cxx.o -MF CMakeFiles/cmTC_42766.dir/src.cxx.o.d -o CMakeFiles/cmTC_42766.dir/src.cxx.o -c /home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-O0AL3C/src.cxx
+        [2/2] : && /home/tt/large/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_42766.dir/src.cxx.o -o cmTC_42766.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/FindWrapRt.cmake:23 (check_cxx_source_compiles)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:145 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:43 (include)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/Qt6Config.cmake:190 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test HAVE_GETTIME"
+    directories:
+      source: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-D8LzwJ"
+      binary: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-D8LzwJ"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/platforms;/home/tt/large/emsdk/upstream/emscripten/cmake/Modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-D8LzwJ'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_a383d
+        [1/2] /home/tt/large/emsdk/upstream/emscripten/em++ -DHAVE_GETTIME  -DQT_QML_DEBUG -MD -MT CMakeFiles/cmTC_a383d.dir/src.cxx.o -MF CMakeFiles/cmTC_a383d.dir/src.cxx.o.d -o CMakeFiles/cmTC_a383d.dir/src.cxx.o -c /home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-D8LzwJ/src.cxx
+        [2/2] : && /home/tt/large/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_a383d.dir/src.cxx.o -o cmTC_a383d.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/FindWrapRt.cmake:34 (check_cxx_source_compiles)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:145 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:43 (include)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/Qt6Config.cmake:190 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test HAVE_SHM_OPEN_SHM_UNLINK"
+    directories:
+      source: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XuYTMy"
+      binary: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XuYTMy"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/platforms;/home/tt/large/emsdk/upstream/emscripten/cmake/Modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_SHM_OPEN_SHM_UNLINK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XuYTMy'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_48159
+        [1/2] /home/tt/large/emsdk/upstream/emscripten/em++ -DHAVE_SHM_OPEN_SHM_UNLINK  -DQT_QML_DEBUG -MD -MT CMakeFiles/cmTC_48159.dir/src.cxx.o -MF CMakeFiles/cmTC_48159.dir/src.cxx.o.d -o CMakeFiles/cmTC_48159.dir/src.cxx.o -c /home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XuYTMy/src.cxx
+        [2/2] : && /home/tt/large/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_48159.dir/src.cxx.o -o cmTC_48159.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake:128 (check_cxx_source_compiles)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:39 (_qt_internal_find_third_party_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:43 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:145 (find_dependency)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:43 (include)"
+      - "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/Qt6Config.cmake:190 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test HAVE_EGL"
+    directories:
+      source: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4Uw8IY"
+      binary: "/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4Uw8IY"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/platforms;/home/tt/large/emsdk/upstream/emscripten/cmake/Modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/tt/large/qt/6.8.2/wasm_multithread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_EGL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4Uw8IY'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_4a375
+        [1/2] /home/tt/large/emsdk/upstream/emscripten/em++ -DHAVE_EGL  -DQT_QML_DEBUG -MD -MT CMakeFiles/cmTC_4a375.dir/src.cxx.o -MF CMakeFiles/cmTC_4a375.dir/src.cxx.o.d -o CMakeFiles/cmTC_4a375.dir/src.cxx.o -c /home/tt/Documents/projects/QuantToolSuite/build/WebAssembly_Qt_6_8_2_multi_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4Uw8IY/src.cxx
+        [2/2] : && /home/tt/large/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_4a375.dir/src.cxx.o -o cmTC_4a375.js   && :
+        
+      exitCode: 0
+...
