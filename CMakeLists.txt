@@ -19,7 +19,7 @@ qt_add_qml_module(appQuantToolSuite
     VERSION 1.0
     QML_FILES
         Main.qml
-        SOURCES test.h
+        SOURCES
         SOURCES Finnhub.h
         SOURCES Finnhub.cpp
 )
