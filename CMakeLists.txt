@@ -3,10 +3,12 @@ cmake_minimum_required(VERSION 3.16)
 project(QuantToolSuite VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+find_package(Qt6 REQUIRED COMPONENTS Core Network)
 find_package(Qt6 REQUIRED COMPONENTS Quick)
 
+
 qt_standard_project_setup(REQUIRES 6.5)
+
 
 qt_add_executable(appQuantToolSuite
     main.cpp
@@ -19,6 +21,7 @@ qt_add_qml_module(appQuantToolSuite
         Main.qml
         SOURCES test.h
         SOURCES Finnhub.h
+        SOURCES Finnhub.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

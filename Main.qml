@@ -13,14 +13,13 @@ ApplicationWindow {
         TextField {
             id: inputField
             placeholderText: "Enter"
-            validator: IntValidator { bottom: -1000; top: 1000 }
+
         }
 
         Button {
             text: "Submit"
             onClicked: {
-                testObj.processNumber(parseInt(inputField.text));
-                testObj.processNumber2(parseInt(inputField.text))
+                finnhubClient.fetchQuote(inputField.text)
             }
         }
 
@@ -37,12 +36,10 @@ ApplicationWindow {
     }
 
     Connections {
-        target: testObj
-        function onNumberProcessed(result) {
+        target: finnhubClient
+        function onQuoteReceived(result) {
             outputText.text = result
         }
-        function onNumberProcessed2(result) {
-            outputText2.text = result
-        }
+
     }
 }
