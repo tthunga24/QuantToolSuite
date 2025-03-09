@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 
+
 ApplicationWindow {
     visible: true
     width: 400
@@ -23,6 +24,14 @@ ApplicationWindow {
             }
         }
 
+        Button {
+            text: "YFinance"
+            onClicked: {
+                yfinanceClient.fetchQuote(inputField.text)
+            }
+        }
+
+
         Text {
             id: outputText
             font.pixelSize: 16
@@ -33,6 +42,7 @@ ApplicationWindow {
             font.pixelSize: 16
             color: "blue"
         }
+
     }
 
     Connections {
@@ -42,4 +52,13 @@ ApplicationWindow {
         }
 
     }
+
+    // Connections for YFinance Client
+    Connections {
+        target: yfinanceClient
+        function onQuoteReceived(result) {
+            outputText2.text = "YFinance Price: " + result
+        }
+    }
+
 }

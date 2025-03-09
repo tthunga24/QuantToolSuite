@@ -3,6 +3,7 @@
 #include <QQmlContext>
 #include <QCoreApplication>
 #include "finnhub.h"
+#include "yfinance.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +12,10 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     Finnhub client;
     engine.rootContext() -> setContextProperty("finnhubClient", &client);
+
+    YFinance yfclient;
+    engine.rootContext()->setContextProperty("yfinanceClient", &yfclient);
+
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,
