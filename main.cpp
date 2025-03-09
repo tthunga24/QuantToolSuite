@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QCoreApplication>
-#include "Finnhub.h"
+#include "finnhub.h"
 
 int main(int argc, char *argv[])
 {

@@ -1,4 +1,4 @@
-#include "Finnhub.h"
+#include "finnhub.h"
 #include <QNetworkRequest>
 #include <QJsonDocument>
 #include <QJsonObject>

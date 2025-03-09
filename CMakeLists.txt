@@ -20,8 +20,9 @@ qt_add_qml_module(appQuantToolSuite
     QML_FILES
         Main.qml
         SOURCES
-        SOURCES Finnhub.h
-        SOURCES Finnhub.cpp
+        SOURCES finnhub.h
+        SOURCES finnhub.cpp
+        SOURCES ticker.h ticker.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
