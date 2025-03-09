@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 
+import "YFinance.js" as YFinance
 
 ApplicationWindow {
     visible: true
@@ -28,6 +29,17 @@ ApplicationWindow {
             text: "YFinance"
             onClicked: {
                 yfinanceClient.fetchQuote(inputField.text)
+            }
+        }
+
+        Button {
+            text: "JS Test"
+            onClicked: {
+                console.log("Button Clicked: Testing JavaScript file...");
+                YFinance.fetchYahooFinanceData(inputField.text, function(result) {
+                    console.log("Test Output:", result);
+                    outputText2.text = result;  // Display result in QML UI
+                });
             }
         }
 
