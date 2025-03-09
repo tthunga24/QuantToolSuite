@@ -7,7 +7,7 @@ Ticker::Ticker(QString symbol_) {
     current_price = 0.0;
 }
 
-void Ticker::UpdatePrices() {\
+void Ticker::UpdatePrices() {
     captured_intervals.clear();
     //TODO: Implement price fetching from API and store in the vector price_history
     //Store latest price in current_price

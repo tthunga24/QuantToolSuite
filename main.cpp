@@ -4,6 +4,7 @@
 #include <QCoreApplication>
 #include "finnhub.h"
 #include "yfinance.h"
+#include "alphavantage.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,8 +12,9 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     Finnhub client;
+    AlphaVantage clientapi("V0LIITCBJRMWNRO8");
     engine.rootContext() -> setContextProperty("finnhubClient", &client);
-
+    engine.rootContext() -> setContextProperty("alphavantage", &clientapi);
     YFinance yfclient;
     engine.rootContext()->setContextProperty("yfinanceClient", &yfclient);
 

@@ -26,6 +26,8 @@ qt_add_qml_module(appQuantToolSuite
         SOURCES yfinance.h
         SOURCES yfinance.cpp
         QML_FILES
+        SOURCES
+        SOURCES alphavantage.h alphavantage.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

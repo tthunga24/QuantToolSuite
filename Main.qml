@@ -20,7 +20,7 @@ ApplicationWindow {
         Button {
             text: "Submit"
             onClicked: {
-                finnhubClient.fetchQuote(inputField.text)
+                alphavantage.fetchTimeSeriesData(inputField.text)
             }
         }
 
@@ -46,8 +46,8 @@ ApplicationWindow {
     }
 
     Connections {
-        target: finnhubClient
-        function onQuoteReceived(result) {
+        target: alphavantage
+        function onDataReceived(result) {
             outputText.text = result
         }
 
