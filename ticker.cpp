@@ -1,3 +1,3 @@
 #include "ticker.h"
 
-Ticker::Ticker() {}
+// Ticker::Ticker() {}
