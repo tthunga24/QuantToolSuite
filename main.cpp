@@ -5,6 +5,7 @@
 #include "finnhub.h"
 #include "yfinance.h"
 #include "alphavantage.h"
+#include "polygon.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,6 +18,9 @@ int main(int argc, char *argv[])
     engine.rootContext() -> setContextProperty("alphavantage", &clientapi);
     YFinance yfclient;
     engine.rootContext()->setContextProperty("yfinanceClient", &yfclient);
+
+    Polygon polygonClient("HWnObBJKkseYPeVXG11yPHxzoSP9sgJC");
+    engine.rootContext() -> setContextProperty("polygonClient", &polygonClient);
 
     QObject::connect(
         &engine,

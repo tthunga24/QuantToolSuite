@@ -18,30 +18,42 @@ ApplicationWindow {
 
         }
 
+        TextField {
+            id: dateStart
+            placeholderText: "Start Date: YYYY-MM-DD"
+
+        }
+
+        TextField {
+            id: dateEnd
+            placeholderText: "End Date: YYYY-MM-DD"
+
+        }
+
         Button {
-            text: "Submit"
+            text: "Alpha Vantage"
             onClicked: {
                 alphavantage.fetchTimeSeriesData(inputField.text)
             }
         }
 
         Button {
-            text: "YFinance"
+            text: "Polygon"
             onClicked: {
-                yfinanceClient.fetchQuote(inputField.text)
+                polygonClient.fetchAggregatesData(inputField.text, dateStart.text, dateEnd.text)
             }
         }
 
-        Button {
-            text: "JS Test"
-            onClicked: {
-                console.log("Button Clicked: Testing JavaScript file...");
-                YFinance.fetchYahooFinanceData(inputField.text, function(result) {
-                    console.log("Test Output:", result);
-                    outputText2.text = result;  // Display result in QML UI
-                });
-            }
-        }
+        // Button {
+        //     text: "JS Test"
+        //     onClicked: {
+        //         console.log("Button Clicked: Testing JavaScript file...");
+        //         YFinance.fetchYahooFinanceData(inputField.text, function(result) {
+        //             console.log("Test Output:", result);
+        //             outputText2.text = result;  // Display result in QML UI
+        //         });
+        //     }
+        // }
 
 
         Text {
@@ -67,9 +79,9 @@ ApplicationWindow {
 
     // Connections for YFinance Client
     Connections {
-        target: yfinanceClient
-        function onQuoteReceived(result) {
-            outputText2.text = "YFinance Price: " + result
+        target: polygonClient
+        function onDataReceived(result) {
+            outputText2.text = result
         }
     }
 
