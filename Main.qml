@@ -78,11 +78,6 @@ ApplicationWindow {
     }
 
     // Connections for YFinance Client
-    Connections {
-        target: polygonClient
-        function onDataReceived(result) {
-            outputText2.text = result
-        }
-    }
+
 
 }

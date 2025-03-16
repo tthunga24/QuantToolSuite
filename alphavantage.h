@@ -15,8 +15,7 @@ public slots:
     void fetchTimeSeriesData(const QString& symbol, const QString& interval = "60min");
 
 signals:
-    void dataReceived(const QByteArray& data);
-    void errorOccurred(const QString& error);
+    void dataReceived(const std::vector<std::pair<double, QString>>& data);
 
 private slots:
     void onReplyFinished(QNetworkReply* reply);
@@ -24,6 +23,8 @@ private slots:
 private:
     QNetworkAccessManager networkManager;
     QString apiKey;
+    std::vector<std::pair<double, QString>> data_vector;
+    void ParseData(QJsonObject& data);
 };
 
 #endif // ALPHAVANTAGE_H

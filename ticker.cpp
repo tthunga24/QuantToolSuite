@@ -12,29 +12,44 @@ Ticker::Ticker(QString symbol_) {
 
 void Ticker::UpdatePrices() {
     captured_intervals.clear();
-    Polygon* polygon_client = new Polygon("HWnObBJKkseYPeVXG11yPHxzoSP9sgJC");
+    polygon_client = new Polygon("HWnObBJKkseYPeVXG11yPHxzoSP9sgJC");
     polygon_client -> fetchAggregatesData(symbol);
 
-    connect(polygon_client, &Polygon::dataReceived, this, [this](const std::vector<std::pair<double, double>>& data) {
+    connect(polygon_client, &Polygon::dataReceived, this, [this](const std::vector<std::pair<double, QString>>& data) {
         if (data.size() == 0) {
             FallbackOnAlpha();
         } else {
             price_history.reserve(data.size());
             date_history.reserve(data.size());
-            for(std::pair<double, double> curr : data) {
+            for(const std::pair<double, QString>& curr : data) {
                 price_history.push_back(curr.first);
                 date_history.push_back(curr.second);
             }
         }
-        qDebug() << price_history[0];
+        polygon_client -> deleteLater();
+        qDebug() << "Data for" << symbol << "fetched from polygon";
     });
-    //Need to figure out how to delete polygon_client to avoid memory leaks
 }
 
 //we only call this with an unsuccessful polygon api call
 void Ticker::FallbackOnAlpha() {
-    AlphaVantage alpha_client("V0LIITCBJRMWNRO8");
+    alpha_client = new AlphaVantage("V0LIITCBJRMWNRO8");
+    alpha_client -> fetchTimeSeriesData(symbol);
 
+    connect(alpha_client, &AlphaVantage::dataReceived, this, [this](const std::vector<std::pair<double, QString>>& data) {
+        if (data.size() == 0) {
+            qDebug() << "Error fetching data from both soucres";
+        } else {
+            price_history.reserve(data.size());
+            date_history.reserve(data.size());
+            for(std::pair<double, QString> curr : data) {
+                price_history.push_back(curr.first);
+                date_history.push_back(curr.second);
+            }
+        }
+        alpha_client -> deleteLater();
+        qDebug() << "Finished";
+    });
 }
 
 const std::vector<double>& Ticker::GetPrices(int interval, int max_entries) {

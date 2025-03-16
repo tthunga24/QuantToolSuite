@@ -42,14 +42,13 @@ void Polygon::fetchAggregatesData(const QString& symbol,
     QNetworkRequest request(url);
     QNetworkReply* reply = networkManager.get(request);
 
-    qDebug() << url.toString();
     connect(reply, &QNetworkReply::finished, this, [this, reply]() {
         this->onReplyFinished(reply);
     });
 }
 
 void Polygon::ParseData(QJsonObject& data) {
-    std::vector<std::pair<double, double>> result;
+    std::vector<std::pair<double, QString>> result;
     int count = data["count"].toInt();
     result.reserve(count);
     //qDebug() << data;
@@ -58,7 +57,7 @@ void Polygon::ParseData(QJsonObject& data) {
     for (const QJsonValue& curr : results) {
         QJsonObject curr_obj = curr.toObject();
         //qDebug() << curr_obj["t"];
-        result.push_back({curr_obj["c"].toDouble(), curr_obj["t"].toDouble()});
+        result.push_back({curr_obj["c"].toDouble(), QString::number(curr_obj["t"].toDouble())});
     }
 
     data_vector = result;
@@ -69,10 +68,9 @@ void Polygon::ParseData(QJsonObject& data) {
         QByteArray data = reply -> readAll();
         QJsonObject doc = QJsonDocument::fromJson(data).object();
         ParseData(doc);
-        qDebug() << data_vector[0];
         emit dataReceived(data_vector);
     } else {
-        data_vector = std::vector<std::pair<double, double>>();
+        data_vector = std::vector<std::pair<double, QString>>();
         emit dataReceived(data_vector);
         qDebug() << "Polygon API Error: " << reply->errorString();
 

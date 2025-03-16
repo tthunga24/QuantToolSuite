@@ -17,7 +17,7 @@ public slots:
                              const QString& timespan = "day", int multiplier = 1, bool adjusted = true, const QString& sort = "asc");
 
 signals:
-    void dataReceived(const std::vector<std::pair<double, double>>& data);
+    void dataReceived(const std::vector<std::pair<double, QString>>& data);
 
 
 private slots:
@@ -27,7 +27,7 @@ private:
     QNetworkAccessManager networkManager;
     QString apiKey;
     void ParseData(QJsonObject& data);
-    std::vector<std::pair<double, double>> data_vector;
+    std::vector<std::pair<double, QString>> data_vector;
 };
 
 #endif // POLYGON_H

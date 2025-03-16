@@ -1,6 +1,8 @@
 #ifndef TICKER_H
 #define TICKER_H
 #include <QObject>
+#include "polygon.h"
+#include "alphavantage.h"
 
 class Ticker : public QObject
 {
@@ -17,7 +19,9 @@ public slots:
 private:
     QString symbol;
     std::vector<double> price_history;
-    std::vector<double> date_history;
+    Polygon* polygon_client;
+    AlphaVantage* alpha_client;
+    std::vector<QString> date_history;
     std::map<int, std::vector<double>> captured_intervals;
     double current_price;
     void FallbackOnAlpha();
