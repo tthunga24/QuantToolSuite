@@ -40,7 +40,7 @@ ApplicationWindow {
         Button {
             text: "Polygon"
             onClicked: {
-                polygonClient.fetchAggregatesData(inputField.text, dateStart.text, dateEnd.text)
+                aapl.fetchPrices();
             }
         }
 

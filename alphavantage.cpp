@@ -27,8 +27,11 @@ void AlphaVantage::fetchTimeSeriesData(const QString& symbol, const QString& int
 
 void AlphaVantage::onReplyFinished(QNetworkReply* reply) {
     if (reply->error() == QNetworkReply::NoError) {
+        QByteArray data = reply -> readAll();
+        QJsonObject doc = QJsonDocument::fromJson(data).object();
+
         emit dataReceived(reply->readAll());
-        qDebug() << "successful";
+        qDebug() << doc;
     } else {
         emit errorOccurred(reply->errorString());\
             qDebug() << "Error";

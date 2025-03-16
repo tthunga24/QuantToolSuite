@@ -13,12 +13,12 @@ public:
     explicit Polygon(const QString& apiKey, QObject* parent = nullptr);
 
 public slots:
-    void fetchAggregatesData(const QString& symbol, const QString& fromDate, const QString& toDate,
+    void fetchAggregatesData(const QString& symbol,
                              const QString& timespan = "day", int multiplier = 1, bool adjusted = true, const QString& sort = "asc");
 
 signals:
-    void dataReceived(const QByteArray& data);
-    void errorOccurred(const QString& error);
+    void dataReceived(const std::vector<std::pair<double, double>>& data);
+
 
 private slots:
     void onReplyFinished(QNetworkReply* reply);
@@ -26,6 +26,8 @@ private slots:
 private:
     QNetworkAccessManager networkManager;
     QString apiKey;
+    void ParseData(QJsonObject& data);
+    std::vector<std::pair<double, double>> data_vector;
 };
 
 #endif // POLYGON_H
