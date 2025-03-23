@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>testingui_2/TestingUI_2Content/App.qml</file>
+        <file>testingui_2/TestingUI_2Content/AutoHedge.ui.qml</file>
+        <file>testingui_2/TestingUI_2Content/Dashboard.ui.qml</file>
+        <file>testingui_2/TestingUI_2Content/Settings.ui.qml</file>
+        <file>testingui_2/TestingUI_2Content/StartScreen.ui.qml</file>
+        <file>testingui_2/TestingUI_2Content/images/demograph.png</file>
+        <file>testingui_2/TestingUI_2Content/images/demograph2.png</file>
+        <file>testingui_2/TestingUI_2Content/designimports.qml</file>
+    </qresource>
+</RCC>

@@ -17,21 +17,31 @@ qt_add_executable(appQuantToolSuite
 qt_add_qml_module(appQuantToolSuite
     URI QuantToolSuite
     VERSION 1.0
+
     QML_FILES
         Main.qml
-        SOURCES
-        SOURCES finnhub.h
-        SOURCES finnhub.cpp
-        SOURCES ticker.h ticker.cpp
-        SOURCES yfinance.h
-        SOURCES yfinance.cpp
-        QML_FILES
-        SOURCES
-        SOURCES alphavantage.h alphavantage.cpp
-        QML_FILES YFinance.js
-        SOURCES polygon.h
-        SOURCES polygon.cpp
+        YFinance.js
+        testingui_2/TestingUI_2Content/App.qml
+        testingui_2/TestingUI_2Content/AutoHedge.ui.qml
+        testingui_2/TestingUI_2Content/Dashboard.ui.qml
+        testingui_2/TestingUI_2Content/Settings.ui.qml
+        testingui_2/TestingUI_2Content/StartScreen.ui.qml
+
+    SOURCES
+        finnhub.h finnhub.cpp
+        ticker.h ticker.cpp
+        yfinance.h yfinance.cpp
+        alphavantage.h alphavantage.cpp
+        polygon.h polygon.cpp
+        RESOURCES resources.qrc
 )
+
+
+qt_add_resources(appQuantToolSuite "resources"
+    FILES resources.qrc
+)
+
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
